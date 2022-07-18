@@ -34,14 +34,14 @@ __check_ip() {
 	echo "========================================"
 	echo "Check what your IP is"
 	echo "----------------------------------------"
-	ipv4=$(curl -s -k ipv4.ip.sb -H 'user-agent: zsh-proxy')
+	ipv4=$(curl -s -k ipv4.ip.sb )
 	if [[ "$ipv4" != "" ]]; then
 		echo "IPv4: $ipv4"
 	else
 		echo "IPv4: -"
 	fi
 	echo "----------------------------------------"
-	ipv6=$(curl -s -k -m10 ipv6.ip.sb -H 'user-agent: zsh-proxy')
+	ipv6=$(curl -s -k -m10 ipv6.ip.sb )
 	if [[ "$ipv6" != "" ]]; then
 		echo "IPv6: $ipv6"
 	else
